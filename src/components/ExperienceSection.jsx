@@ -57,8 +57,6 @@ export default function ExperienceSection() {
 
       <div className="timeline-container">
         <div className="timeline-line"></div>
-        <div className="experience-bg-glow"></div>
-        <div className="experience-bg-glow secondary"></div>
         
         {experiences.map((exp, index) => (
           <motion.div 
