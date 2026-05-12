@@ -50,56 +50,8 @@
   display: flex;
   gap: var(--spacing-md);
   justify-content: center;
-  margin-bottom: var(--spacing-xl);
-  flex-wrap: wrap;
-}
-
-.contact-btn {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 1rem 2rem;
-  border-radius: 12px;
-  font-weight: 600;
-  font-size: 1.05rem;
-  transition: all 0.3s ease;
-}
-
-.contact-btn.primary {
-  background: #111827;
-  color: white;
-}
-
-.contact-btn.primary:hover {
-  background: #374151;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.2);
-}
-
-.contact-btn.secondary {
-  background: white;
-  border: 1px solid var(--glass-border);
-  color: #111827;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-}
-
-.contact-btn.secondary:hover {
-  background: #f9fafb;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.05);
-}
-
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: var(--spacing-lg);
   margin-bottom: var(--spacing-xxl);
-}
-
-.social-icon {
-  color: var(--text-secondary);
-  transition: color 0.3s ease;
-  padding: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .footer {

@@ -30,9 +30,8 @@ const caseStudies = [
     summary: 'Redesigning the core user experience for an AI-powered presentation builder to increase user trust and granular control.',
     tags: ['AI Workflow', 'UX Design', 'Trust Systems'],
     links: [
-      { text: 'Prototype', url: 'https://weather-api-blond-sigma.vercel.app/', icon: <Play size={16} /> },
-      { text: 'PRD', url: 'https://drive.google.com/file/d/1Mw5XKVlRqADX6XoDGmykIPQCsVsAcxFC/view', icon: <FileText size={16} /> },
-      { text: 'Case Study', url: '#', icon: <FileText size={16} /> }
+      { text: 'Analysis Report', url: 'https://drive.google.com/file/d/1jhyIXAVEduK8oQw23qmGNMe06Rwcg-mr/view?usp=sharing', icon: <FileText size={16} /> },
+      { text: 'PRD', url: 'https://drive.google.com/file/d/1XqR8r7GNXifHt2XyFU0s2_8A37NTYkRu/view?usp=sharing', icon: <FileText size={16} /> }
     ]
   }
 ];

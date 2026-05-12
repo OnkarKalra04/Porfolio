@@ -38,28 +38,15 @@ export default function AboutSection() {
         </motion.div>
 
         <motion.div 
-          className="about-visuals"
+          className="about-image-area"
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <div className="visual-card card-1 glass-panel">
-            <div className="card-content">
-              <h3>Product Strategy</h3>
-              <p>User-Centric Design</p>
-            </div>
-          </div>
-          <div className="visual-card card-2 glass-panel">
-            <div className="card-content">
-              <h3>Systems Thinking</h3>
-              <p>Aerospace Foundation</p>
-            </div>
-          </div>
-          <div className="visual-card card-3 glass-panel">
-            <div className="card-content">
-              <h3>AI & Innovation</h3>
-              <p>Scalable Solutions</p>
+          <div className="about-image-container glass-panel">
+            <div className="image-placeholder">
+              <span>Photo coming soon</span>
             </div>
           </div>
         </motion.div>

@@ -4,29 +4,29 @@ import './ExperienceSection.css';
 
 const experiences = [
   {
+    id: 'synodic',
+    company: 'Synodic Space Labs Private Limited',
+    role: 'Systems Engineer Intern',
+    duration: '2026',
+    description: 'Assisted in structural design and integration of satellite subsystems. Conducted feasibility studies for orbital mechanics.'
+  },
+  {
     id: 'hal',
-    company: 'HAL (ARDC)',
+    company: 'Aircraft Research and Design Centre (ARDC), Hindustan Aeronautics Limited (HAL)',
     role: 'Aerospace Engineering Intern',
-    duration: '2023 - 2024',
+    duration: '2024',
     description: 'Worked on control law development and CFD analysis for advanced flight systems. Collaborated with senior engineers to optimize aerodynamic performance.',
     link: 'https://drive.google.com/file/d/1JmgHD1UgUWXGb1H9ghEbKUqQ7UVcR4CF/view',
     linkText: 'Report'
   },
   {
     id: 'star',
-    company: 'STAR Space Technology',
+    company: 'Star Space Technology & Aeronautical Rocketry',
     role: 'Research Intern',
-    duration: '2022',
+    duration: '2023',
     description: 'Participated in the design and testing of a conceptual UAV framework. Focused on weight reduction and payload optimization.',
     link: 'https://drive.google.com/file/d/1kbfOfPHDncZEQi6tA32AWuHvK8tzRs5Q/view',
     linkText: 'Report'
-  },
-  {
-    id: 'synodic',
-    company: 'Synodic Space Labs',
-    role: 'Systems Engineer Intern',
-    duration: '2023',
-    description: 'Assisted in structural design and integration of satellite subsystems. Conducted feasibility studies for orbital mechanics.'
   }
 ];
 

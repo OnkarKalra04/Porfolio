@@ -15,7 +15,7 @@ const training = [
     title: 'AISC Training', 
     issuer: 'Aero Innovation & Skill Centre', 
     desc: 'Advanced CAD modeling and aerodynamics simulation training.',
-    link: 'https://weather-api-blond-sigma.vercel.app/'
+    link: '#'
   }
 ];
 
@@ -58,24 +58,34 @@ export default function AccoladesSection() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ delay: i * 0.2, duration: 0.5 }}
             >
-              <a 
-                href={item.link} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="training-card-link"
-              >
+              {item.link && item.link !== '#' ? (
+                <a 
+                  href={item.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="training-card-link"
+                >
+                  <div className="training-card glass-panel clickable">
+                    <div className="training-content">
+                      <h3>{item.title}</h3>
+                      <span className="issuer">{item.issuer}</span>
+                      <p>{item.desc}</p>
+                    </div>
+                    <div className="training-hover-reveal">
+                      <ExternalLink size={32} color="var(--accent-primary)" />
+                      <span>Certificate</span>
+                    </div>
+                  </div>
+                </a>
+              ) : (
                 <div className="training-card glass-panel">
                   <div className="training-content">
                     <h3>{item.title}</h3>
                     <span className="issuer">{item.issuer}</span>
                     <p>{item.desc}</p>
                   </div>
-                  <div className="training-hover-reveal">
-                    <ExternalLink size={32} color="var(--accent-primary)" />
-                    <span>Certificate</span>
-                  </div>
                 </div>
-              </a>
+              )}
             </motion.div>
           ))}
         </div>

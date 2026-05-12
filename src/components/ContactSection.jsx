@@ -22,12 +22,36 @@ export default function ContactSection() {
 
         <div className="contact-buttons">
           <motion.a 
-            href="mailto:contact@onkarkalra.com" 
+            href="mailto:onkarkalra2k4@gmail.com" 
             className="btn-premium contact-btn"
             whileTap={{ scale: 0.95 }}
           >
             <Mail size={18} />
             <span>Email Me</span>
+            <ExternalLink size={12} className="external-icon" />
+          </motion.a>
+
+          <motion.a 
+            href="https://www.linkedin.com/in/onkar-kalra/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="btn-premium contact-btn"
+            whileTap={{ scale: 0.95 }}
+          >
+            <FaLinkedin size={18} />
+            <span>LinkedIn</span>
+            <ExternalLink size={12} className="external-icon" />
+          </motion.a>
+
+          <motion.a 
+            href="https://github.com/OnkarKalra04" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="btn-premium contact-btn"
+            whileTap={{ scale: 0.95 }}
+          >
+            <FaGithub size={18} />
+            <span>GitHub</span>
             <ExternalLink size={12} className="external-icon" />
           </motion.a>
 
@@ -39,23 +63,6 @@ export default function ContactSection() {
             <FileText size={18} />
             <span>Resume</span>
             <ExternalLink size={12} className="external-icon" />
-          </motion.a>
-        </div>
-
-        <div className="social-links">
-          <motion.a 
-            href="#" 
-            className="social-icon"
-            whileHover={{ y: -5, color: 'var(--accent-primary)' }}
-          >
-            <FaLinkedin size={24} />
-          </motion.a>
-          <motion.a 
-            href="#" 
-            className="social-icon"
-            whileHover={{ y: -5, color: 'var(--text-primary)' }}
-          >
-            <FaGithub size={24} />
           </motion.a>
         </div>
       </motion.div>

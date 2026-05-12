@@ -71,7 +71,6 @@ export default function CadProjectsSection() {
             </div>
             
             <div className="cad-info glass-panel">
-              <span className="project-type">{project.type}</span>
               <h3>{project.title}</h3>
               <p>{project.description}</p>
               <a 

@@ -6,8 +6,7 @@ import './HeroSection.css';
 const roles = [
   "Aerospace Engineer",
   "Product & AI Enthusiast",
-  "Systems Thinker",
-  "Aspiring MS Student"
+  "Swimmer"
 ];
 
 export default function HeroSection() {
