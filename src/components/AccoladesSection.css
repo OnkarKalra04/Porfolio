@@ -1,0 +1,217 @@
+/* Training */
+.training-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.training-card-link {
+  text-decoration: none;
+  display: block;
+  color: inherit;
+}
+
+.training-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 200px;
+  cursor: pointer;
+  background: white;
+  border-radius: 16px;
+  box-shadow: var(--shadow-premium);
+  transition: all 0.3s ease;
+}
+
+.training-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+}
+
+.training-content {
+  padding: var(--spacing-lg);
+  position: relative;
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
+.training-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.issuer {
+  font-size: 0.85rem;
+  color: var(--accent-primary);
+  display: block;
+  margin-bottom: var(--spacing-md);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.training-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.training-hover-reveal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.training-card:hover .training-hover-reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.training-card:hover .training-content {
+  opacity: 0.1;
+}
+
+/* Certifications */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.cert-card {
+  padding: var(--spacing-md) var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.05);
+}
+
+.cert-card h3 {
+  font-size: 1rem;
+  margin: 0 0 0.25rem 0;
+  color: var(--text-primary);
+}
+
+.cert-card span {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.cert-more {
+  background: transparent;
+  border: 1px dashed #d1d5db;
+  border-radius: 16px;
+  align-items: center;
+  text-align: center;
+  box-shadow: none;
+}
+
+.cert-more:hover {
+  background: rgba(0, 0, 0, 0.01);
+  border-color: #9ca3af;
+}
+
+.more-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+}
+
+.more-content h3 {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+/* Extracurriculars */
+.extra-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
+}
+
+.extra-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--spacing-xl) var(--spacing-lg);
+  position: relative;
+  overflow: hidden;
+  background: white;
+  border-radius: 20px;
+  box-shadow: var(--shadow-premium);
+}
+
+.extra-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--accent-gradient);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.extra-card:hover::before {
+  transform: scaleX(1);
+}
+
+.extra-icon {
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-md);
+  transition: color 0.3s ease;
+}
+
+.extra-card:hover .extra-icon {
+  color: var(--accent-primary);
+}
+
+.extra-stats {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: var(--spacing-sm);
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.stats-suffix {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #6b7280; /* Neutral gray */
+  -webkit-text-fill-color: #6b7280;
+  margin-left: 0.25rem;
+}
+
+.extra-title {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  margin: 0;
+}

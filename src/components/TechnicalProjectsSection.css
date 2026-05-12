@@ -1,0 +1,123 @@
+.tech-projects-section {
+  padding-bottom: var(--spacing-xxl);
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+}
+
+.tech-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background: white;
+  border-radius: 20px;
+  box-shadow: var(--shadow-premium);
+}
+
+@media (min-width: 768px) {
+  .tech-card {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.tech-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.08);
+}
+
+.tech-card-content {
+  padding: var(--spacing-xl);
+  flex: 1;
+  position: relative;
+  z-index: 2;
+}
+
+.tech-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--text-primary);
+}
+
+.tech-card p {
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-lg);
+  max-width: 600px;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-pill {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  background: #f3f4f6;
+  color: #4b5563;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.tech-links {
+  display: flex;
+  gap: var(--spacing-md);
+  padding: var(--spacing-xl);
+  background: #f9fafb;
+  position: relative;
+  z-index: 2;
+}
+
+@media (min-width: 768px) {
+  .tech-links {
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    border-left: 1px solid var(--glass-border);
+    min-width: 200px;
+  }
+}
+
+.tech-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.tech-link:hover {
+  color: var(--accent-primary);
+  transform: translateX(5px);
+}
+
+.floating-gradient {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  width: 150px;
+  height: 150px;
+  background: var(--accent-secondary);
+  filter: blur(80px);
+  border-radius: 50%;
+  transform: translateY(-50%);
+  opacity: 0.08;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.tech-card:nth-child(even) .floating-gradient {
+  left: 10%;
+  right: auto;
+  background: var(--accent-primary);
+}
