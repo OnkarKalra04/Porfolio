@@ -65,9 +65,7 @@ export default function AboutSection() {
           transition={{ duration: 0.5, delay: 0.3 }}
         >
           <div className="about-image-container glass-panel">
-            <div className="image-placeholder">
-              <span>Photo coming soon</span>
-            </div>
+            <img src="/assets/onkar.jpg" alt="Onkar Kalra" className="about-profile-img" />
           </div>
         </motion.div>
       </div>

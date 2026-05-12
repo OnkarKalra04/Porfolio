@@ -8,6 +8,7 @@ const cadProjects = [
     title: 'Boeing 737 CAD Model',
     description: 'Detailed 3D model of the Boeing 737 focusing on aerodynamic surfacing and structural integrity.',
     type: 'Commercial Aircraft',
+    image: '/assets/boeing.png',
     link: 'https://drive.google.com/file/d/1t47zM1KGKRwLa1q-UCY4j-NJGhL7i1Ed/view'
   },
   {
@@ -15,6 +16,7 @@ const cadProjects = [
     title: 'Missile Design – Dracarys',
     description: 'Advanced missile concept design emphasizing high-speed aerodynamics and payload capacity.',
     type: 'Defense Concept',
+    image: '/assets/missile.png',
     link: 'https://drive.google.com/file/d/1HGAGMZgEEL0aiVNpdMLregm5Pevcy2Gd/view'
   },
   {
@@ -22,6 +24,7 @@ const cadProjects = [
     title: 'UAV Design',
     description: 'Unmanned Aerial Vehicle engineered for extended flight duration and surveillance capabilities.',
     type: 'Autonomous Systems',
+    image: '/assets/uav.png',
     link: 'https://drive.google.com/file/d/1oyzexLefng3kbZB6u0-wPoQgbLiMZ82y/view'
   }
 ];
@@ -51,18 +54,8 @@ export default function CadProjectsSection() {
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
             <div className="cad-model-container">
-              <div className="placeholder-model">
-                <motion.div
-                  animate={{ 
-                    rotateY: [0, 360],
-                  }}
-                  transition={{ 
-                    duration: 25, repeat: Infinity, ease: "linear"
-                  }}
-                  className="wireframe-box"
-                >
-                  <Box size={64} strokeWidth={1} color="rgba(0,0,0,0.05)" />
-                </motion.div>
+              <div className="cad-image-wrapper">
+                <img src={project.image} alt={project.title} className="cad-project-img" />
                 <div className="spotlight"></div>
               </div>
             </div>
