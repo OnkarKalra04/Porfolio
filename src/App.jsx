@@ -11,6 +11,7 @@ import ExperienceSection from './components/ExperienceSection';
 import ResearchSection from './components/ResearchSection';
 import AccoladesSection from './components/AccoladesSection';
 import ContactSection from './components/ContactSection';
+import BackgroundDecor from './components/BackgroundDecor';
 
 function App() {
   const { scrollYProgress } = useScroll();
@@ -22,6 +23,7 @@ function App() {
 
   return (
     <div className="app-container">
+      <BackgroundDecor />
       {/* Global Scroll Progress Bar */}
       <motion.div
         className="scroll-progress-bar"

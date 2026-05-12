@@ -44,10 +44,10 @@
 }
 
 .cad-info {
-  padding: 1.5rem;
-  border-radius: 20px;
-  transform: translateY(-25px);
-  margin: 0 1rem;
+  padding: 1.2rem;
+  border-radius: 16px;
+  transform: translateY(-20px);
+  margin: 0 0.75rem;
   background: white;
   border: 1px solid rgba(0, 0, 0, 0.03);
 }
