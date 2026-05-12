@@ -59,14 +59,27 @@ export default function AboutSection() {
 
         <motion.div 
           className="about-image-area"
-          initial={{ opacity: 0, scale: 0.98 }}
+          initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
+          transition={{ duration: 0.8 }}
         >
-          <div className="about-image-container glass-panel">
-            <img src="/assets/onkar.jpg" alt="Onkar Kalra" className="about-profile-img" />
-          </div>
+          <motion.div 
+            className="about-image-wrapper"
+            animate={{
+              y: [0, -10, 0],
+            }}
+            transition={{
+              duration: 6,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          >
+            <div className="about-image-container circular-frame">
+              <img src="/assets/onkar.jpg" alt="Onkar Kalra" className="about-profile-img" />
+              <div className="frame-glow"></div>
+            </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>

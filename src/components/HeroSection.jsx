@@ -76,6 +76,22 @@ export default function HeroSection() {
         transition={{ type: "spring", stiffness: 50, damping: 20 }}
       />
 
+      <div className="hero-decor">
+        <motion.div 
+          className="decor-shape shape-1"
+          animate={{ rotate: 360 }}
+          transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+        />
+        <motion.div 
+          className="decor-shape shape-2"
+          animate={{ 
+            y: [0, -20, 0],
+            x: [0, 10, 0]
+          }}
+          transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
+        />
+      </div>
+
       <div className="hero-content">
         <motion.p 
           className="greeting"

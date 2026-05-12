@@ -12,6 +12,28 @@
   padding: var(--spacing-xl) 0;
 }
 
+.experience-bg-glow {
+  position: absolute;
+  top: 20%;
+  left: -20%;
+  width: 500px;
+  height: 500px;
+  background: var(--glow-primary);
+  filter: blur(120px);
+  opacity: 0.3;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.experience-bg-glow.secondary {
+  top: 60%;
+  right: -20%;
+  left: auto;
+  background: var(--glow-secondary);
+  width: 400px;
+  height: 400px;
+}
+
 .timeline-line {
   position: absolute;
   top: 0;
