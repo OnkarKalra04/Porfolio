@@ -69,29 +69,29 @@ export default function CaseStudiesSection() {
   const cardVariants = {
     center: {
       x: '0%',
-      scale: 1.1,
+      scale: 1.05,
       opacity: 1,
       zIndex: 10,
       filter: 'blur(0px)',
-      boxShadow: '0 25px 50px -12px rgba(59, 130, 246, 0.25)',
+      boxShadow: '0 25px 50px -12px rgba(59, 130, 246, 0.2)',
       pointerEvents: 'auto'
     },
     left: {
-      x: '-65%',
-      scale: 0.85,
-      opacity: 0.4,
+      x: '-60%',
+      scale: 0.9,
+      opacity: 0.8,
       zIndex: 5,
-      filter: 'blur(2px)',
-      boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)',
+      filter: 'blur(1px)',
+      boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.05)',
       pointerEvents: 'none'
     },
     right: {
-      x: '65%',
-      scale: 0.85,
-      opacity: 0.4,
+      x: '60%',
+      scale: 0.9,
+      opacity: 0.8,
       zIndex: 5,
-      filter: 'blur(2px)',
-      boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)',
+      filter: 'blur(1px)',
+      boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.05)',
       pointerEvents: 'none'
     },
     hidden: {
