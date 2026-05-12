@@ -28,10 +28,10 @@ export default function TechnicalProjectsSection() {
   return (
     <section id="technical-projects" className="tech-projects-section section-container">
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
       >
         <h2 className="section-title">Technical Projects</h2>
         <div className="title-underline"></div>
@@ -42,10 +42,10 @@ export default function TechnicalProjectsSection() {
           <motion.div
             key={project.id}
             className="tech-card glass-panel"
-            initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
           >
             <div className="tech-card-content">
               <h3>{project.title}</h3>
@@ -74,9 +74,6 @@ export default function TechnicalProjectsSection() {
                 </a>
               )}
             </div>
-            
-            {/* Floating gradient orb in background */}
-            <div className="floating-gradient"></div>
           </motion.div>
         ))}
       </div>

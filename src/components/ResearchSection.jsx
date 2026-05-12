@@ -6,18 +6,18 @@ import './ResearchSection.css';
 const researchPapers = [
   {
     id: 'uav-power',
-    title: 'UAV Power Optimization Research Paper',
-    journal: 'International Journal of Aerospace Engineering',
+    title: 'Analytical Approach for Optimal Power Consumption for an Unmanned Aerial System',
+    journal: 'International Conference on Sustainable Aerospace Technologies',
     date: '2023',
-    abstract: 'This paper explores advanced power management strategies for Unmanned Aerial Vehicles (UAVs) to extend flight duration without compromising payload capacity. It presents a novel algorithm for dynamic power allocation during different flight phases.',
+    abstract: 'Conducted aerodynamic analysis using ANSYS and implemented control simulations in MATLAB Simulink to optimize power consumption profiles for autonomous systems.',
     link: 'https://drive.google.com/file/d/19NKp6NW-FMI3O77_NuZlvN-fBtvkfcnZ/view'
   },
   {
     id: 'naca-4412',
-    title: 'NACA 4412 Airfoil Analysis',
-    journal: 'Aerospace Mechanics Conference',
+    title: 'Capstone Project: Aerodynamic Analysis of NACA 4412 Airfoil',
+    journal: 'Aerospace Engineering Capstone',
     date: '2022',
-    abstract: 'A comprehensive Computational Fluid Dynamics (CFD) analysis of the NACA 4412 airfoil at various angles of attack. The study validates theoretical lift and drag coefficients against simulated real-world conditions.',
+    abstract: 'Performed CFD-based aerodynamic analysis in ANSYS Fluent to evaluate flow separation control and airfoil performance under various flight conditions.',
     link: 'https://drive.google.com/file/d/13wwonRS3WrUhgdqi5wJfnea0Ydrqkgu4/view'
   }
 ];
@@ -33,10 +33,10 @@ export default function ResearchSection() {
   return (
     <section id="research" className="research-section section-container">
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
       >
         <h2 className="section-title">Research & Publications</h2>
         <div className="title-underline"></div>
@@ -47,10 +47,10 @@ export default function ResearchSection() {
           <motion.div 
             key={paper.id}
             className="research-card glass-panel"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
           >
             <div 
               className="research-header"
@@ -80,7 +80,7 @@ export default function ResearchSection() {
                   initial={{ height: 0, opacity: 0 }}
                   animate={{ height: 'auto', opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 0.25 }}
                   className="research-details"
                 >
                   <div className="abstract">

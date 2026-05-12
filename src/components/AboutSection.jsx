@@ -5,10 +5,10 @@ export default function AboutSection() {
   return (
     <section id="about" className="about-section section-container">
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
         className="about-header"
       >
         <h2 className="section-title">About Me</h2>
@@ -18,10 +18,10 @@ export default function AboutSection() {
       <div className="about-content">
         <motion.div 
           className="about-text glass-panel"
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.1 }}
         >
           <p>
             I’m <strong>Onkar Kalra</strong>, an Aerospace Engineering graduate transitioning into <strong>Product Management</strong> with a strong interest in AI-driven systems, user-focused problem solving, and product strategy. My background in aerospace has helped me develop a structured approach to analyzing complex systems, understanding technical workflows, and building scalable solutions.
@@ -39,10 +39,10 @@ export default function AboutSection() {
 
         <motion.div 
           className="about-image-area"
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
         >
           <div className="about-image-container glass-panel">
             <div className="image-placeholder">

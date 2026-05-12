@@ -10,10 +10,10 @@ export default function ContactSection() {
       
       <motion.div
         className="contact-content"
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
       >
         <h2 className="text-gradient contact-title">Let's Build the Future</h2>
         <p className="contact-subtitle">
@@ -24,7 +24,7 @@ export default function ContactSection() {
           <motion.a 
             href="mailto:onkarkalra2k4@gmail.com" 
             className="btn-premium contact-btn"
-            whileTap={{ scale: 0.95 }}
+            whileTap={{ scale: 0.98 }}
           >
             <Mail size={18} />
             <span>Email Me</span>
@@ -36,7 +36,7 @@ export default function ContactSection() {
             target="_blank" 
             rel="noopener noreferrer"
             className="btn-premium contact-btn"
-            whileTap={{ scale: 0.95 }}
+            whileTap={{ scale: 0.98 }}
           >
             <FaLinkedin size={18} />
             <span>LinkedIn</span>
@@ -48,22 +48,13 @@ export default function ContactSection() {
             target="_blank" 
             rel="noopener noreferrer"
             className="btn-premium contact-btn"
-            whileTap={{ scale: 0.95 }}
+            whileTap={{ scale: 0.98 }}
           >
             <FaGithub size={18} />
             <span>GitHub</span>
             <ExternalLink size={12} className="external-icon" />
           </motion.a>
 
-          <motion.a 
-            href="#" 
-            className="btn-premium contact-btn"
-            whileTap={{ scale: 0.95 }}
-          >
-            <FileText size={18} />
-            <span>Resume</span>
-            <ExternalLink size={12} className="external-icon" />
-          </motion.a>
         </div>
       </motion.div>
 

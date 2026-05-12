@@ -1,5 +1,8 @@
 .experience-section {
-  padding-bottom: var(--spacing-xxl);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .timeline-container {
@@ -81,12 +84,6 @@
   background: white;
 }
 
-.timeline-item:hover .timeline-content {
-  transform: translateY(-5px);
-  border-color: var(--accent-primary);
-  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.05);
-}
-
 @media (min-width: 768px) {
   .timeline-content {
     margin-left: 0;
@@ -102,40 +99,6 @@
   }
 }
 
-.timeline-content-link {
-  width: 100%;
-  text-decoration: none;
-  display: block;
-}
-
-.timeline-content.clickable {
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.timeline-content.clickable:hover {
-  transform: translateY(-5px);
-  border-color: var(--accent-primary);
-  box-shadow: 0 15px 45px -15px rgba(0, 0, 0, 0.1);
-}
-
-.link-hint {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.85rem;
-  color: var(--accent-primary);
-  margin-top: 1rem;
-  font-weight: 600;
-  opacity: 0.8;
-  transition: all 0.3s ease;
-}
-
-.timeline-content.clickable:hover .link-hint {
-  opacity: 1;
-  transform: translateX(5px);
-}
-
 .duration {
   display: inline-block;
   font-size: 0.85rem;
@@ -146,19 +109,37 @@
   border-radius: 20px;
 }
 
-.timeline-content h3 {
+.role-title {
   font-size: 1.3rem;
   margin-bottom: 0.25rem;
 }
 
-.company {
+.company-name {
   font-size: 1rem;
-  margin-bottom: var(--spacing-md);
+  margin-bottom: 1rem;
   font-weight: 500;
+  color: var(--text-secondary);
 }
 
-.timeline-content p {
-  margin: 0;
+.exp-points {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.exp-points li {
   font-size: 0.95rem;
   line-height: 1.6;
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+}
+
+.exp-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--accent-primary);
+  margin-top: 1rem;
+  font-weight: 600;
 }

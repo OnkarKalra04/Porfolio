@@ -49,40 +49,21 @@ export default function HeroSection() {
         transition={{ type: "spring", stiffness: 50, damping: 20 }}
       />
 
-      {/* Floating Particles / Orbital Visual */}
-      <div className="orbital-container">
-        <motion.div 
-          className="orbit ring-1"
-          animate={{ rotate: 360 }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-        />
-        <motion.div 
-          className="orbit ring-2"
-          animate={{ rotate: -360 }}
-          transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-        />
-        <motion.div 
-          className="orbit ring-3"
-          animate={{ rotate: 360 }}
-          transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-        />
-      </div>
-
       <div className="hero-content">
         <motion.p 
           className="greeting"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.5 }}
         >
-          Hi, I'm
+          Product Engineer
         </motion.p>
         
         <motion.h1 
-          className="name text-gradient"
+          className="name"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
         >
           Onkar Kalra
         </motion.h1>
@@ -90,10 +71,10 @@ export default function HeroSection() {
         <div className="roles-container">
           <motion.div
             key={currentRoleIndex}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.4 }}
             className="role-text"
           >
             {roles[currentRoleIndex]}
@@ -102,13 +83,13 @@ export default function HeroSection() {
 
         <motion.button
           className="btn-premium hero-cta"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          whileTap={{ scale: 0.95 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          whileTap={{ scale: 0.98 }}
           onClick={() => document.getElementById('case-studies')?.scrollIntoView({ behavior: 'smooth' })}
         >
-          <span>View My Work</span>
+          <span>Explore Projects</span>
           <ArrowDown size={14} />
         </motion.button>
       </div>

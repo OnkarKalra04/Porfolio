@@ -36,23 +36,23 @@ const containerVariants = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
-    transition: { staggerChildren: 0.1 }
+    transition: { staggerChildren: 0.05 }
   }
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 100 } }
+  hidden: { opacity: 0, y: 15 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } }
 };
 
 export default function SkillsSection() {
   return (
     <section id="skills" className="skills-section section-container">
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
       >
         <h2 className="section-title">Skills & Expertise</h2>
         <div className="title-underline"></div>
@@ -63,17 +63,13 @@ export default function SkillsSection() {
         variants={containerVariants}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, margin: "-50px" }}
+        viewport={{ once: true }}
       >
         {skillCategories.map((category, index) => (
           <motion.div 
             key={index} 
             className="skill-category-card glass-panel"
             variants={itemVariants}
-            whileHover={{ 
-              y: -5,
-              boxShadow: "0 20px 40px -20px rgba(0,0,0,0.1)"
-            }}
           >
             <div className="category-header">
               <div className="category-icon" style={{ background: category.gradient }}>

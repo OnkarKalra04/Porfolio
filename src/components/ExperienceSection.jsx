@@ -6,25 +6,37 @@ const experiences = [
   {
     id: 'synodic',
     company: 'Synodic Space Labs Private Limited',
-    role: 'Systems Engineer Intern',
+    role: 'Research & Development Intern',
     duration: '2026',
-    description: 'Assisted in structural design and integration of satellite subsystems. Conducted feasibility studies for orbital mechanics.'
+    points: [
+      'Contributed to rocket airframe and recovery system development for experimental flight missions.',
+      'Collaborated with avionics and testing teams to validate flight system performance.',
+      'Assisted in mission testing workflows targeting high-altitude experimental launches.'
+    ]
   },
   {
     id: 'hal',
-    company: 'Aircraft Research and Design Centre (ARDC), Hindustan Aeronautics Limited (HAL)',
-    role: 'Aerospace Engineering Intern',
+    company: 'Hindustan Aeronautics Limited (HAL)',
+    role: 'Intern',
     duration: '2024',
-    description: 'Worked on control law development and CFD analysis for advanced flight systems. Collaborated with senior engineers to optimize aerodynamic performance.',
+    points: [
+      'Analyzed aircraft control systems and aerodynamic behavior to study design trade-offs.',
+      'Documented technical findings and operational insights through detailed research reports.',
+      'Worked on system-level analysis and performance evaluation workflows.'
+    ],
     link: 'https://drive.google.com/file/d/1JmgHD1UgUWXGb1H9ghEbKUqQ7UVcR4CF/view',
     linkText: 'Report'
   },
   {
     id: 'star',
     company: 'Star Space Technology & Aeronautical Rocketry',
-    role: 'Research Intern',
+    role: 'Satellite Design Intern',
     duration: '2023',
-    description: 'Participated in the design and testing of a conceptual UAV framework. Focused on weight reduction and payload optimization.',
+    points: [
+      'Led a 6-member team to design a CubeSat prototype using CAD and rapid prototyping tools.',
+      'Coordinated subsystem integration including telemetry, communication, and structural modules.',
+      'Assisted in system testing and validation for satellite development workflows.'
+    ],
     link: 'https://drive.google.com/file/d/1kbfOfPHDncZEQi6tA32AWuHvK8tzRs5Q/view',
     linkText: 'Report'
   }
@@ -50,38 +62,38 @@ export default function ExperienceSection() {
           <motion.div 
             key={exp.id}
             className="timeline-item"
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, delay: index * 0.2 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
           >
             <div className="timeline-icon">
               <Briefcase size={20} />
             </div>
             
-            {exp.link ? (
-              <a 
-                href={exp.link} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="timeline-content-link"
-              >
-                <div className="timeline-content glass-panel clickable">
-                  <span className="duration">{exp.duration}</span>
-                  <h3>{exp.role}</h3>
-                  <h4 className="company text-gradient">{exp.company}</h4>
-                  <p>{exp.description}</p>
-                  <div className="link-hint">{exp.linkText || 'Report'} <ExternalLink size={14} /></div>
-                </div>
-              </a>
-            ) : (
-              <div className="timeline-content glass-panel">
-                <span className="duration">{exp.duration}</span>
-                <h3>{exp.role}</h3>
-                <h4 className="company text-gradient">{exp.company}</h4>
-                <p>{exp.description}</p>
-              </div>
-            )}
+            <div className="timeline-content glass-panel">
+              <span className="duration">{exp.duration}</span>
+              <h3 className="role-title">{exp.role}</h3>
+              <h4 className="company-name">{exp.company}</h4>
+              
+              <ul className="exp-points">
+                {exp.points.map((point, i) => (
+                  <li key={i}>{point}</li>
+                ))}
+              </ul>
+
+              {exp.link && (
+                <a 
+                  href={exp.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="exp-link"
+                >
+                  <span>{exp.linkText || 'Technical Report'}</span>
+                  <ExternalLink size={14} />
+                </a>
+              )}
+            </div>
           </motion.div>
         ))}
       </div>

@@ -30,10 +30,10 @@ export default function CadProjectsSection() {
   return (
     <section id="cad-projects" className="cad-projects-section section-container">
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
         className="section-header-center"
       >
         <h2 className="section-title">Aerospace CAD Projects</h2>
@@ -45,26 +45,23 @@ export default function CadProjectsSection() {
           <motion.div 
             key={project.id}
             className="cad-card"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.6, delay: index * 0.2 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
           >
             <div className="cad-model-container">
-              {/* This represents where a 3D viewer or image carousel would go */}
               <div className="placeholder-model">
                 <motion.div
                   animate={{ 
                     rotateY: [0, 360],
-                    rotateX: [10, -10, 10]
                   }}
                   transition={{ 
-                    rotateY: { duration: 20, repeat: Infinity, ease: "linear" },
-                    rotateX: { duration: 10, repeat: Infinity, ease: "easeInOut" }
+                    duration: 25, repeat: Infinity, ease: "linear"
                   }}
                   className="wireframe-box"
                 >
-                  <Box size={64} strokeWidth={1} color="rgba(255,255,255,0.2)" />
+                  <Box size={64} strokeWidth={1} color="rgba(0,0,0,0.05)" />
                 </motion.div>
                 <div className="spotlight"></div>
               </div>

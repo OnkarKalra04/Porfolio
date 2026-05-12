@@ -20,12 +20,13 @@ const training = [
 ];
 
 const certifications = [
-  { id: 'c1', title: 'Advanced CFD Analysis', issuer: 'Coursera' },
-  { id: 'c2', title: 'Python for Data Science', issuer: 'IBM' },
-  { id: 'c3', title: 'Machine Learning Basics', issuer: 'Stanford' },
-  { id: 'c4', title: 'Project Management Pro', issuer: 'Google' },
-  { id: 'c5', title: 'Aircraft Design Principles', issuer: 'NPTEL' },
-  { id: 'c6', title: '+ 155 More', issuer: 'Various Institutions', isMore: true }
+  { id: 'c1', title: 'International Radiobiology Conference', issuer: 'INMAS, DRDO' },
+  { id: 'c2', title: 'Digitalisation in the Aerospace Industry', issuer: 'Technical University of Munich (Coursera)' },
+  { id: 'c3', title: 'Wind Energy Certification', issuer: 'Technical University of Denmark' },
+  { id: 'c4', title: 'ANSYS Workbench Certification', issuer: 'Udemy' },
+  { id: 'c5', title: 'CSWA — Certified SolidWorks Associate', issuer: 'SolidWorks' },
+  { id: 'c6', title: 'Product Management 101', issuer: 'Product Strategy & Lifecycle' },
+  { id: 'c7', title: 'Rocket Masterclass', issuer: 'Star Space Technology & Aeronautical Rocketry' }
 ];
 
 const extracurriculars = [
@@ -40,10 +41,10 @@ export default function AccoladesSection() {
       {/* Training Section */}
       <section id="training" className="section-container">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
         >
           <h2 className="section-title">Training</h2>
           <div className="title-underline"></div>
@@ -53,10 +54,10 @@ export default function AccoladesSection() {
           {training.map((item, i) => (
             <motion.div 
               key={item.id}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ delay: i * 0.2, duration: 0.5 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1, duration: 0.5 }}
             >
               {item.link && item.link !== '#' ? (
                 <a 
@@ -94,10 +95,10 @@ export default function AccoladesSection() {
       {/* Certifications Section */}
       <section id="certifications" className="section-container">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
         >
           <h2 className="section-title">Certifications</h2>
           <div className="title-underline"></div>
@@ -107,24 +108,14 @@ export default function AccoladesSection() {
           {certifications.map((cert, i) => (
             <motion.div
               key={cert.id}
-              className={`cert-card ${cert.isMore ? 'cert-more' : 'glass-panel'}`}
-              initial={{ opacity: 0, y: 20 }}
+              className="cert-card glass-panel"
+              initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ delay: i * 0.1, duration: 0.5 }}
-              whileHover={{ y: -5, borderColor: 'var(--accent-secondary)' }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.05, duration: 0.4 }}
             >
-              {cert.isMore ? (
-                <div className="more-content">
-                  <Plus size={24} />
-                  <h3>{cert.title}</h3>
-                </div>
-              ) : (
-                <>
-                  <h3>{cert.title}</h3>
-                  <span>{cert.issuer}</span>
-                </>
-              )}
+              <h3>{cert.title}</h3>
+              <span>{cert.issuer}</span>
             </motion.div>
           ))}
         </div>
@@ -133,10 +124,10 @@ export default function AccoladesSection() {
       {/* Extracurriculars Section */}
       <section id="extracurricular" className="section-container">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
         >
           <h2 className="section-title">Extracurricular Activities</h2>
           <div className="title-underline"></div>
@@ -147,10 +138,10 @@ export default function AccoladesSection() {
             <motion.div
               key={extra.id}
               className="extra-card glass-panel"
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ type: "spring", stiffness: 100, delay: i * 0.2 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
             >
               <div className="extra-icon">{extra.icon}</div>
               <div className="extra-stats text-gradient">
