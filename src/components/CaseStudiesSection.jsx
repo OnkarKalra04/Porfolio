@@ -57,6 +57,53 @@ export default function CaseStudiesSection() {
   const next = () => setActiveIndex((prev) => (prev + 1) % caseStudies.length);
   const prev = () => setActiveIndex((prev) => (prev - 1 + caseStudies.length) % caseStudies.length);
 
+  const getPosition = (index) => {
+    const diff = (index - activeIndex + caseStudies.length) % caseStudies.length;
+    
+    if (diff === 0) return 'center';
+    if (diff === 1 || (diff === - (caseStudies.length - 1))) return 'right';
+    if (diff === (caseStudies.length - 1) || diff === -1) return 'left';
+    return 'hidden';
+  };
+
+  const cardVariants = {
+    center: {
+      x: '0%',
+      scale: 1.1,
+      opacity: 1,
+      zIndex: 10,
+      filter: 'blur(0px)',
+      boxShadow: '0 25px 50px -12px rgba(59, 130, 246, 0.25)',
+      pointerEvents: 'auto'
+    },
+    left: {
+      x: '-65%',
+      scale: 0.85,
+      opacity: 0.4,
+      zIndex: 5,
+      filter: 'blur(2px)',
+      boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)',
+      pointerEvents: 'none'
+    },
+    right: {
+      x: '65%',
+      scale: 0.85,
+      opacity: 0.4,
+      zIndex: 5,
+      filter: 'blur(2px)',
+      boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)',
+      pointerEvents: 'none'
+    },
+    hidden: {
+      x: '0%',
+      scale: 0.5,
+      opacity: 0,
+      zIndex: 0,
+      filter: 'blur(10px)',
+      pointerEvents: 'none'
+    }
+  };
+
   return (
     <section id="case-studies" className="case-studies-section section-container">
       <motion.div
@@ -76,69 +123,59 @@ export default function CaseStudiesSection() {
         </button>
         
         <div className="carousel-track">
-          <AnimatePresence mode="popLayout" initial={false}>
-            {caseStudies.map((study, index) => {
-              // Simple logic for 3-card carousel visibility
-              // In a small array of 3, we can just render them all and use activeIndex to style
-              const isCenter = index === activeIndex;
-              const isLeft = (index === (activeIndex - 1 + caseStudies.length) % caseStudies.length);
-              const isRight = (index === (activeIndex + 1) % caseStudies.length);
-              
-              let positionClass = '';
-              if (isCenter) positionClass = 'center';
-              else if (isLeft) positionClass = 'left';
-              else if (isRight) positionClass = 'right';
-
-              return (
-                <motion.div 
-                  key={study.id}
-                  layout
-                  className={`case-card glass-panel ${positionClass}`}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ 
-                    opacity: isCenter ? 1 : 0.6,
-                    scale: isCenter ? 1.05 : 0.92,
-                    zIndex: isCenter ? 10 : 1,
-                    x: isCenter ? 0 : isLeft ? -20 : 20
-                  }}
-                  transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                >
-                  <div className="case-card-content">
-                    <h3 className="case-title">{study.title}</h3>
-                    <p className="case-summary">{study.summary}</p>
-                    
-                    <ul className="case-points">
-                      {study.points.map((point, i) => (
-                        <li key={i}>{point}</li>
-                      ))}
-                    </ul>
-
-                    <div className="tags">
-                      {study.tags.map(tag => (
-                        <span key={tag} className="tag">{tag}</span>
-                      ))}
-                    </div>
-                  </div>
+          {caseStudies.map((study, index) => {
+            const position = getPosition(index);
+            
+            return (
+              <motion.div 
+                key={study.id}
+                initial={false}
+                animate={position}
+                variants={cardVariants}
+                transition={{ 
+                  type: "spring", 
+                  stiffness: 260, 
+                  damping: 26,
+                  opacity: { duration: 0.3 }
+                }}
+                className={`case-card glass-panel ${position === 'center' ? 'center' : ''}`}
+                style={{ position: 'absolute' }}
+              >
+                <div className="case-card-content">
+                  <h3 className="case-title">{study.title}</h3>
+                  <p className="case-summary">{study.summary}</p>
                   
-                  <div className="case-card-actions">
-                    {study.links.map((link, idx) => (
-                      <a 
-                        key={idx} 
-                        href={link.url} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="btn-premium"
-                      >
-                        {link.icon}
-                        <span>{link.text}</span>
-                        <ExternalLink size={12} className="external-icon" />
-                      </a>
+                  <ul className="case-points">
+                    {study.points.map((point, i) => (
+                      <li key={i}>{point}</li>
+                    ))}
+                  </ul>
+
+                  <div className="tags">
+                    {study.tags.map(tag => (
+                      <span key={tag} className="tag">{tag}</span>
                     ))}
                   </div>
-                </motion.div>
-              );
-            })}
-          </AnimatePresence>
+                </div>
+                
+                <div className="case-card-actions">
+                  {study.links.map((link, idx) => (
+                    <a 
+                      key={idx} 
+                      href={link.url} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="btn-premium"
+                    >
+                      {link.icon}
+                      <span>{link.text}</span>
+                      <ExternalLink size={12} className="external-icon" />
+                    </a>
+                  ))}
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
 
         <button className="nav-btn next" onClick={next} aria-label="Next Project">
