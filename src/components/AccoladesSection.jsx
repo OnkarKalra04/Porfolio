@@ -15,7 +15,7 @@ const training = [
     title: 'AISC Training', 
     issuer: 'Aero Innovation & Skill Centre', 
     desc: 'Advanced CAD modeling and aerodynamics simulation training.',
-    link: '#'
+    link: 'https://drive.google.com/file/d/1wNZQ26TQ2HKbvMmLZy8UeAe-dwMPMIIF/view?usp=sharing'
   }
 ];
 

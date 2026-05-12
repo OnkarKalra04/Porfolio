@@ -48,6 +48,20 @@ const caseStudies = [
       { text: 'Report', url: 'https://drive.google.com/file/d/1jhyIXAVEduK8oQw23qmGNMe06Rwcg-mr/view?usp=sharing', icon: <FileText size={14} /> },
       { text: 'PRD', url: 'https://drive.google.com/file/d/1XqR8r7GNXifHt2XyFU0s2_8A37NTYkRu/view?usp=sharing', icon: <FileText size={14} /> }
     ]
+  },
+  {
+    id: 'joshtalks',
+    title: 'JoshTalks AI Product Challenge',
+    summary: 'Designed scalable AI workflow systems for multilingual data collection and moderation.',
+    tags: ['AI Systems', 'Workflow Design', 'PM Strategy'],
+    points: [
+      'Built workflows for India-scale multilingual data collection systems.',
+      'Designed AI-assisted moderation and transcriber quality control pipelines.',
+      'Structured scalable Voice AI evaluation systems using calibration and scoring.'
+    ],
+    links: [
+      { text: 'Report', url: '#', icon: <FileText size={14} /> }
+    ]
   }
 ];
 
@@ -79,18 +93,18 @@ export default function CaseStudiesSection() {
     left: {
       x: '-60%',
       scale: 0.9,
-      opacity: 0.8,
+      opacity: 0.85,
       zIndex: 5,
-      filter: 'blur(1px)',
+      filter: 'blur(0.5px)',
       boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.05)',
       pointerEvents: 'none'
     },
     right: {
       x: '60%',
       scale: 0.9,
-      opacity: 0.8,
+      opacity: 0.85,
       zIndex: 5,
-      filter: 'blur(1px)',
+      filter: 'blur(0.5px)',
       boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.05)',
       pointerEvents: 'none'
     },
