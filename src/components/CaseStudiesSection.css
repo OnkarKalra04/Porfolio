@@ -143,6 +143,27 @@
   box-shadow: 0 6px 16px rgba(59, 130, 246, 0.3);
 }
 
+.carousel-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 2.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  letter-spacing: 0.1em;
+}
+
+.carousel-indicator .current {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.carousel-indicator .divider {
+  opacity: 0.3;
+}
+
 @media (max-width: 900px) {
   .carousel-track {
     height: 520px;
@@ -155,6 +176,9 @@
   .nav-btn {
     width: 40px;
     height: 40px;
+  }
+  .carousel-indicator {
+    margin-top: 1.5rem;
   }
 }
 

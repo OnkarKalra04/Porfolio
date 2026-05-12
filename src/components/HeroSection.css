@@ -65,15 +65,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 
 .role-text {
   font-size: clamp(1.2rem, 5vw, 2rem);
   font-weight: 500;
   color: var(--text-secondary);
-  position: absolute;
   letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+}
+
+.cursor {
+  margin-left: 2px;
+  color: var(--accent-primary);
+  animation: blink 1s step-end infinite;
+  font-weight: 200;
+}
+
+@keyframes blink {
+  from, to { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 .hero-cta {

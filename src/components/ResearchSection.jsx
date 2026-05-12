@@ -8,7 +8,7 @@ const researchPapers = [
     id: 'uav-power',
     title: 'Analytical Approach for Optimal Power Consumption for an Unmanned Aerial System',
     journal: 'International Conference on Sustainable Aerospace Technologies',
-    date: '2023',
+    date: '2025',
     abstract: 'Conducted aerodynamic analysis using ANSYS and implemented control simulations in MATLAB Simulink to optimize power consumption profiles for autonomous systems.',
     link: 'https://drive.google.com/file/d/19NKp6NW-FMI3O77_NuZlvN-fBtvkfcnZ/view'
   },
@@ -16,7 +16,7 @@ const researchPapers = [
     id: 'naca-4412',
     title: 'Capstone Project: Aerodynamic Analysis of NACA 4412 Airfoil',
     journal: 'Aerospace Engineering Capstone',
-    date: '2022',
+    date: '2025',
     abstract: 'Performed CFD-based aerodynamic analysis in ANSYS Fluent to evaluate flow separation control and airfoil performance under various flight conditions.',
     link: 'https://drive.google.com/file/d/13wwonRS3WrUhgdqi5wJfnea0Ydrqkgu4/view'
   }

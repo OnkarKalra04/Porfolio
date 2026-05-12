@@ -10,15 +10,40 @@ const roles = [
 ];
 
 export default function HeroSection() {
-  const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [displayText, setDisplayText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [typingSpeed, setTypingSpeed] = useState(100);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentRoleIndex((prev) => (prev + 1) % roles.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
+    let timer;
+    const currentFullText = roles[currentRoleIndex];
+
+    const handleTyping = () => {
+      if (!isDeleting) {
+        setDisplayText(currentFullText.substring(0, displayText.length + 1));
+        setTypingSpeed(100);
+
+        if (displayText === currentFullText) {
+          timer = setTimeout(() => setIsDeleting(true), 2000);
+          return;
+        }
+      } else {
+        setDisplayText(currentFullText.substring(0, displayText.length - 1));
+        setTypingSpeed(50);
+
+        if (displayText === '') {
+          setIsDeleting(false);
+          setCurrentRoleIndex((prev) => (prev + 1) % roles.length);
+          return;
+        }
+      }
+
+      timer = setTimeout(handleTyping, typingSpeed);
+    };
+
+    timer = setTimeout(handleTyping, typingSpeed);
+    return () => clearTimeout(timer);
+  }, [displayText, isDeleting, currentRoleIndex]);
 
   const handleMouseMove = (e) => {
     const x = (e.clientX / window.innerWidth - 0.5) * 20;
@@ -69,16 +94,9 @@ export default function HeroSection() {
         </motion.h1>
 
         <div className="roles-container">
-          <motion.div
-            key={currentRoleIndex}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.4 }}
-            className="role-text"
-          >
-            {roles[currentRoleIndex]}
-          </motion.div>
+          <div className="role-text typing">
+            {displayText}<span className="cursor">|</span>
+          </div>
         </div>
 
         <motion.button

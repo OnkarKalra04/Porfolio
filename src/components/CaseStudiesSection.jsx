@@ -60,7 +60,7 @@ const caseStudies = [
       'Structured scalable Voice AI evaluation systems using calibration and scoring.'
     ],
     links: [
-      { text: 'Report', url: '#', icon: <FileText size={14} /> }
+      { text: 'Report', url: 'https://drive.google.com/file/d/16NtsZQzQowRLrsc-vGSuPnCAQlDwToSL/view?usp=sharing', icon: <FileText size={14} /> }
     ]
   }
 ];
@@ -195,6 +195,12 @@ export default function CaseStudiesSection() {
         <button className="nav-btn next" onClick={next} aria-label="Next Project">
           <ChevronRight size={24} />
         </button>
+      </div>
+
+      <div className="carousel-indicator">
+        <span className="current">{activeIndex + 1}</span>
+        <span className="divider">/</span>
+        <span className="total">{caseStudies.length}</span>
       </div>
     </section>
   );
