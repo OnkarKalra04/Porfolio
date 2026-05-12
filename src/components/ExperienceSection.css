@@ -99,69 +99,92 @@
 
 .timeline-content {
   margin-left: 70px;
-  padding: var(--spacing-lg);
+  padding: 1.25rem 1.5rem;
   position: relative;
   width: 100%;
   transition: all 0.3s ease;
   background: white;
+  border-radius: 16px;
 }
 
 @media (min-width: 768px) {
   .timeline-content {
     margin-left: 0;
-    width: 90%;
+    width: 85%;
   }
   
   .timeline-item:nth-child(even) .timeline-content {
-    margin-right: 10%;
+    margin-right: 15%;
   }
   
   .timeline-item:nth-child(odd) .timeline-content {
-    margin-left: 10%;
+    margin-left: 15%;
   }
 }
 
 .duration {
   display: inline-block;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--text-secondary);
-  margin-bottom: 0.5rem;
-  padding: 0.2rem 0.8rem;
+  margin-bottom: 0.4rem;
+  padding: 0.15rem 0.6rem;
   background: rgba(0, 0, 0, 0.03);
   border-radius: 20px;
+  font-weight: 600;
 }
 
 .role-title {
-  font-size: 1.3rem;
-  margin-bottom: 0.25rem;
+  font-size: 1.15rem;
+  margin-bottom: 0.1rem;
+  letter-spacing: -0.01em;
 }
 
 .company-name {
-  font-size: 1rem;
-  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
   font-weight: 500;
-  color: var(--text-secondary);
+  color: var(--accent-primary);
 }
 
 .exp-points {
   list-style: none;
   padding: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .exp-points li {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  margin-bottom: 0.4rem;
   color: var(--text-secondary);
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.exp-points li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--accent-primary);
+  opacity: 0.6;
+  font-size: 0.8rem;
 }
 
 .exp-link {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 0.85rem;
+  gap: 0.4rem;
+  font-size: 0.8rem;
   color: var(--accent-primary);
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  background: rgba(59, 130, 246, 0.05);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.exp-link:hover {
+  background: rgba(59, 130, 246, 0.1);
+  transform: translateX(3px);
 }
