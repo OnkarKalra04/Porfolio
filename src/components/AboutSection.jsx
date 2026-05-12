@@ -16,33 +16,53 @@ export default function AboutSection() {
       </motion.div>
 
       <div className="about-content">
-        <motion.div 
-          className="about-text glass-panel"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-        >
-          <p>
-            I’m <strong>Onkar Kalra</strong>, an Aerospace Engineering graduate transitioning into <strong>Product Management</strong> with a strong interest in AI-driven systems, user-focused problem solving, and product strategy. My background in aerospace has helped me develop a structured approach to analyzing complex systems, understanding technical workflows, and building scalable solutions.
-          </p>
-          <p>
-            Through internships at organizations such as <strong>HAL (ARDC)</strong> and <strong>STAR</strong>, I worked on areas including control systems, CFD analysis, structural design, and cross-functional engineering collaboration — experiences that strengthened my systems thinking and execution mindset.
-          </p>
-          <p>
-            Over time, my focus evolved from building engineering systems to <strong>designing product experiences</strong> and solving real user problems. I’ve worked on product case studies, AI product redesigns, PRDs, growth strategy projects, and user-centric platforms across domains including AI, career guidance, and marketplace ecosystems.
-          </p>
-          <p className="highlight-text">
-            With 160+ certifications, national-level achievements in swimming, and leadership experience, I’m driven by building products that combine structured thinking, usability, and real-world impact.
-          </p>
-        </motion.div>
+        <div className="about-text-container">
+          <motion.div 
+            className="about-block"
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <h3 className="block-title"><span className="accent-line"></span>The Transition</h3>
+            <p>
+              I’m <strong>Onkar Kalra</strong>, an Aerospace Engineering graduate transitioning into <strong>Product Management</strong>. My background helps me develop a structured approach to analyzing complex systems and building scalable technical solutions.
+            </p>
+          </motion.div>
+
+          <motion.div 
+            className="about-block"
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            <h3 className="block-title"><span className="accent-line"></span>The Experience</h3>
+            <p>
+              Through internships at <strong>HAL (ARDC)</strong> and <strong>STAR</strong>, I worked on control systems, CFD analysis, and structural design — experiences that sharpened my <strong>systems thinking</strong> and execution mindset.
+            </p>
+          </motion.div>
+
+          <motion.div 
+            className="about-block"
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <h3 className="block-title"><span className="accent-line"></span>The Vision</h3>
+            <p>
+              I’ve evolved from building engineering systems to <strong>designing product experiences</strong>. With 160+ certifications and a national-level swimming background, I combine discipline with a drive to solve real-world user problems.
+            </p>
+          </motion.div>
+        </div>
 
         <motion.div 
           className="about-image-area"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, scale: 0.98 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
         >
           <div className="about-image-container glass-panel">
             <div className="image-placeholder">
