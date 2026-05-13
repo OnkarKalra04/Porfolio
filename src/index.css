@@ -89,30 +89,68 @@ body::before {
 .space-decor {
   position: fixed;
   color: var(--accent-primary);
-  opacity: 0.04;
+  opacity: 0.03;
   pointer-events: none;
   z-index: -1;
 }
 
 .rocket-1 {
   top: 15%;
-  right: 10%;
-  transform: rotate(-45deg);
+  right: 5%;
+  transform: rotate(-30deg);
 }
 
 .satellite-1 {
-  bottom: 20%;
-  left: 10%;
+  bottom: 15%;
+  left: 5%;
 }
+
+.trajectory-line {
+  position: fixed;
+  width: 300px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent-primary), transparent);
+  top: 40%;
+  left: -50px;
+  transform: rotate(-15deg);
+  opacity: 0.02;
+}
+
+.node { color: var(--accent-secondary); }
+.node-1 { top: 25%; left: 8%; }
+.node-2 { bottom: 30%; right: 12%; }
+
+.wave-flow {
+  top: 55%;
+  right: 6%;
+}
+
+.ripple-1 {
+  bottom: 8%;
+  right: 25%;
+}
+
+.lane-line-1, .lane-line-2 {
+  position: fixed;
+  width: 100vw;
+  height: 1px;
+  background: var(--accent-primary);
+  opacity: 0.015;
+  left: 0;
+}
+
+.lane-line-1 { top: 12%; transform: skewY(-1deg); }
+.lane-line-2 { bottom: 12%; transform: skewY(1deg); }
 
 .star {
   color: var(--accent-secondary);
-  opacity: 0.06;
+  opacity: 0.05;
 }
 
 .star-1 { top: 30%; left: 15%; }
 .star-2 { top: 70%; right: 20%; }
 .star-3 { bottom: 10%; left: 40%; }
+.star-4 { top: 10%; right: 40%; }
 
 .blob-1 {
   width: 600px;
