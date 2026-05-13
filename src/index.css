@@ -86,6 +86,34 @@ body::before {
   will-change: transform;
 }
 
+.space-decor {
+  position: fixed;
+  color: var(--accent-primary);
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.rocket-1 {
+  top: 15%;
+  right: 10%;
+  transform: rotate(-45deg);
+}
+
+.satellite-1 {
+  bottom: 20%;
+  left: 10%;
+}
+
+.star {
+  color: var(--accent-secondary);
+  opacity: 0.06;
+}
+
+.star-1 { top: 30%; left: 15%; }
+.star-2 { top: 70%; right: 20%; }
+.star-3 { bottom: 10%; left: 40%; }
+
 .blob-1 {
   width: 600px;
   height: 600px;

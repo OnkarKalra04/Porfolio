@@ -20,13 +20,13 @@ const training = [
 ];
 
 const certifications = [
-  { id: 'c1', title: 'International Radiobiology Conference', issuer: 'INMAS, DRDO' },
-  { id: 'c2', title: 'Digitalisation in the Aerospace Industry', issuer: 'Technical University of Munich (Coursera)' },
-  { id: 'c3', title: 'Wind Energy Certification', issuer: 'Technical University of Denmark' },
-  { id: 'c4', title: 'ANSYS Workbench Certification', issuer: 'Udemy' },
-  { id: 'c5', title: 'CSWA — Certified SolidWorks Associate', issuer: 'SolidWorks' },
-  { id: 'c6', title: 'Product Management 101', issuer: 'Product Strategy & Lifecycle' },
-  { id: 'c7', title: 'Rocket Masterclass', issuer: 'Star Space Technology & Aeronautical Rocketry' }
+  { id: 'c1', title: 'International Radiobiology Conference', issuer: 'INMAS, DRDO', icon: <FileText size={18} /> },
+  { id: 'c2', title: 'Digitalisation in the Aerospace Industry', issuer: 'Technical University of Munich (Coursera)', icon: <Layout size={18} /> },
+  { id: 'c3', title: 'Wind Energy Certification', issuer: 'Technical University of Denmark', icon: <Award size={18} /> },
+  { id: 'c4', title: 'ANSYS Workbench Certification', issuer: 'Udemy', icon: <Plus size={18} /> },
+  { id: 'c5', title: 'CSWA — Certified SolidWorks Associate', issuer: 'SolidWorks', icon: <Layout size={18} /> },
+  { id: 'c6', title: 'Product Management 101', issuer: 'Product Strategy & Lifecycle', icon: <Plus size={18} /> },
+  { id: 'c7', title: 'Rocket Masterclass', issuer: 'Star Space Technology & Aeronautical Rocketry', icon: <Zap size={18} /> }
 ];
 
 const extracurriculars = [
@@ -92,7 +92,6 @@ export default function AccoladesSection() {
         </div>
       </section>
 
-      {/* Certifications Section */}
       <section id="certifications" className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -114,8 +113,15 @@ export default function AccoladesSection() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.05, duration: 0.4 }}
             >
-              <h3>{cert.title}</h3>
-              <span>{cert.issuer}</span>
+              <div className="cert-header">
+                <div className="cert-icon-container">
+                  {cert.icon}
+                </div>
+                <div className="cert-info">
+                  <h3>{cert.title}</h3>
+                  <span>{cert.issuer}</span>
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>
