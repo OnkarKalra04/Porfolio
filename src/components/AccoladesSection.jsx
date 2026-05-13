@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Award, Zap, HeartPulse, ExternalLink, Plus } from 'lucide-react';
+import { Award, Zap, HeartPulse, ExternalLink, Plus, FileText, Layout } from 'lucide-react';
 import './AccoladesSection.css';
 
 const training = [
