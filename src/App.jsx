@@ -9,7 +9,8 @@ import CadProjectsSection from './components/CadProjectsSection';
 import TechnicalProjectsSection from './components/TechnicalProjectsSection';
 import ExperienceSection from './components/ExperienceSection';
 import ResearchSection from './components/ResearchSection';
-import AccoladesSection from './components/AccoladesSection';
+import CertificationsSection from './components/CertificationsSection';
+import ExtracurricularSection from './components/ExtracurricularSection';
 import ContactSection from './components/ContactSection';
 import BackgroundDecor from './components/BackgroundDecor';
 import Navbar from './components/Navbar';
@@ -35,13 +36,13 @@ function App() {
       <main>
         <HeroSection />
         <AboutSection />
-        <SkillsSection />
+        <ExperienceSection />
         <CaseStudiesSection />
         <CadProjectsSection />
-        <TechnicalProjectsSection />
-        <ExperienceSection />
         <ResearchSection />
-        <AccoladesSection />
+        <CertificationsSection />
+        <SkillsSection />
+        <ExtracurricularSection />
         <ContactSection />
       </main>
     </div>
