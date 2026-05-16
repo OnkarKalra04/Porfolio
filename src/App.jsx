@@ -6,9 +6,9 @@ import AboutSection from './components/AboutSection';
 import SkillsSection from './components/SkillsSection';
 import CaseStudiesSection from './components/CaseStudiesSection';
 import CadProjectsSection from './components/CadProjectsSection';
-import TechnicalProjectsSection from './components/TechnicalProjectsSection';
 import ExperienceSection from './components/ExperienceSection';
 import ResearchSection from './components/ResearchSection';
+import TrainingSection from './components/TrainingSection';
 import CertificationsSection from './components/CertificationsSection';
 import ExtracurricularSection from './components/ExtracurricularSection';
 import ContactSection from './components/ContactSection';
@@ -36,12 +36,13 @@ function App() {
       <main>
         <HeroSection />
         <AboutSection />
+        <SkillsSection />
         <ExperienceSection />
         <CaseStudiesSection />
         <CadProjectsSection />
         <ResearchSection />
+        <TrainingSection />
         <CertificationsSection />
-        <SkillsSection />
         <ExtracurricularSection />
         <ContactSection />
       </main>

@@ -6,12 +6,13 @@ import './Navbar.css';
 const navLinks = [
   { name: 'Home', href: '#home' },
   { name: 'About', href: '#about' },
+  { name: 'Skills', href: '#skills' },
   { name: 'Experience', href: '#experience' },
   { name: 'Projects', href: '#case-studies' },
   { name: 'Aerospace CAD', href: '#cad-projects' },
   { name: 'Research', href: '#research' },
-  { name: 'Certifications', href: '#training' },
-  { name: 'Skills', href: '#skills' },
+  { name: 'Training', href: '#training' },
+  { name: 'Certifications', href: '#certifications' },
   { name: 'Extracurricular', href: '#extracurricular' },
   { name: 'Contact', href: '#contact' },
 ];
