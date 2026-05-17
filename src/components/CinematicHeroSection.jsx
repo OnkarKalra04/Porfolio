@@ -1,8 +1,6 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls } from '@react-three/drei';
-import { Rocket, Sparkles, Plane, Waves, ArrowRight, Download, Box, Layout, FileText, Activity } from 'lucide-react';
+import { Sparkles, Plane, Waves, ArrowRight, Download, Box, Layout, FileText, Activity, Mail } from 'lucide-react';
 import './CinematicHeroSection.css';
 
 // --- Rain Component ---
@@ -49,37 +47,6 @@ const Particles = () => {
   );
 };
 
-// --- Holographic Airplane Model (Simplified Abstract Wireframe) ---
-const WireframePlane = () => {
-  const meshRef = useRef();
-  useFrame((state) => {
-    if (!meshRef.current) return;
-    const t = state.clock.getElapsedTime();
-    meshRef.current.rotation.y = t * 0.4;
-    meshRef.current.rotation.z = Math.sin(t * 0.5) * 0.1;
-    meshRef.current.position.y = Math.sin(t) * 0.2;
-  });
-  return (
-    <group ref={meshRef}>
-      {/* Fuselage */}
-      <mesh rotation={[0, 0, Math.PI / 2]}>
-        <cylinderGeometry args={[0.3, 0.3, 3, 8]} />
-        <meshBasicMaterial color="#3b82f6" wireframe transparent opacity={0.6} />
-      </mesh>
-      {/* Wings */}
-      <mesh position={[0, 0, 0]} rotation={[Math.PI / 2, 0, 0]}>
-        <boxGeometry args={[1, 0.05, 4]} />
-        <meshBasicMaterial color="#06b6d4" wireframe transparent opacity={0.5} />
-      </mesh>
-      {/* Tail */}
-      <mesh position={[1.2, 0.4, 0]} rotation={[0, 0, -Math.PI / 4]}>
-        <boxGeometry args={[0.5, 0.05, 1]} />
-        <meshBasicMaterial color="#3b82f6" wireframe transparent opacity={0.6} />
-      </mesh>
-    </group>
-  );
-};
-
 export default function CinematicHeroSection() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const containerRef = useRef(null);
@@ -103,7 +70,7 @@ export default function CinematicHeroSection() {
   return (
     <section id="home" className="hero-section" onMouseMove={handleMouseMove} ref={containerRef}>
       
-      {/* Dynamic Background Image & Ambient Effects (Moves opposite to mouse) */}
+      {/* Dynamic Background Image & Ambient Effects */}
       <motion.div 
         className="hero-bg-layer"
         animate={{ x: -parallaxX, y: -parallaxY }}
@@ -118,7 +85,7 @@ export default function CinematicHeroSection() {
 
       <div className="hero-overlay-dark"></div>
 
-      {/* Main Left Content (Static, no parallax for readability) */}
+      {/* Main Left Content */}
       <div className="hero-content">
         <motion.div className="hero-subtitle" initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
           <span className="glow-dash"></span> ENGINEER. BUILDER. PROBLEM SOLVER.
@@ -162,7 +129,7 @@ export default function CinematicHeroSection() {
         </motion.div>
       </div>
 
-      {/* --- Interactive Holographic Monitors (Overlaid on Background) --- */}
+      {/* --- Interactive Holographic Monitors --- */}
       <motion.div 
         className="holographic-hud-layer"
         animate={{ x: parallaxX * 0.5, y: parallaxY * 0.5 }}
@@ -178,12 +145,16 @@ export default function CinematicHeroSection() {
         >
           <div className="hud-title"><Activity size={12} /> Live Aero CAD Sync</div>
           <div className="canvas-wrapper">
-            <Canvas camera={{ position: [0, 0, 5], fov: 40 }}>
-              <ambientLight intensity={0.5} />
-              <pointLight position={[10, 10, 10]} intensity={1} color="#3b82f6" />
-              <WireframePlane />
-              <OrbitControls enableZoom={false} enablePan={false} />
-            </Canvas>
+            <div className="css-3d-scene">
+              <div className="css-3d-object">
+                <div className="css-3d-face front"></div>
+                <div className="css-3d-face back"></div>
+                <div className="css-3d-face left"></div>
+                <div className="css-3d-face right"></div>
+                <div className="css-3d-face top"></div>
+                <div className="css-3d-face bottom"></div>
+              </div>
+            </div>
           </div>
         </a>
 
