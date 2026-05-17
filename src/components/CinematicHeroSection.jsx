@@ -129,22 +129,22 @@ export default function CinematicHeroSection() {
         </motion.div>
       </div>
 
-      {/* --- Invisible Interactive Hotspots (Mapped to Image Monitors) --- */}
+      {/* --- Integrated Screen Replacements (Mapped directly onto the physical monitors) --- */}
       <motion.div 
-        className="invisible-hotspots-layer"
+        className="integrated-screens-layer"
         animate={{ x: parallaxX * 0.5, y: parallaxY * 0.5 }}
         transition={{ type: "spring", stiffness: 60, damping: 25 }}
       >
         
-        {/* Hologram Aircraft (Top Right) */}
+        {/* Hologram Aircraft Hotspot (Top Right) */}
         <a 
           href="https://drive.google.com/file/d/1t47zM1KGKRwLa1q-UCY4j-NJGhL7i1Ed/view" 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="hotspot hologram-hotspot"
+          className="integrated-screen hologram-hotspot"
           aria-label="View CAD Project"
         >
-          <div className="hotspot-glow"></div>
+          <div className="hologram-pulse"></div>
         </a>
 
         {/* Center Monitor (Research Paper) */}
@@ -152,10 +152,19 @@ export default function CinematicHeroSection() {
           href="https://drive.google.com/file/d/19NKp6NW-FMI3O77_NuZlvN-fBtvkfcnZ/view" 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="hotspot center-monitor-hotspot"
-          aria-label="View Research Paper"
+          className="integrated-screen center-monitor-screen"
         >
-           <div className="hotspot-glow"></div>
+          <div className="screen-content pdf-screen">
+             <div className="pdf-header">UAV Power Optimization Research Paper</div>
+             <div className="pdf-body">
+               <div className="pdf-line title"></div>
+               <div className="pdf-line"></div>
+               <div className="pdf-line short"></div>
+               <div className="pdf-line image-block"></div>
+               <div className="pdf-line"></div>
+             </div>
+          </div>
+          <div className="screen-glow"></div>
         </a>
 
         {/* Left Monitor (PathFinder) */}
@@ -163,10 +172,18 @@ export default function CinematicHeroSection() {
           href="https://path-finder-rho-five.vercel.app/" 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="hotspot left-monitor-hotspot"
-          aria-label="View PathFinder Prototype"
+          className="integrated-screen left-monitor-screen"
         >
-           <div className="hotspot-glow"></div>
+          <div className="screen-content pathfinder-screen">
+             <div className="pf-header">PathFinder</div>
+             <div className="pf-subtext">AI-Powered Career Guidance Platform</div>
+             <div className="pf-ui-grid">
+               <div className="pf-box active"></div>
+               <div className="pf-box"></div>
+               <div className="pf-box wide"></div>
+             </div>
+          </div>
+          <div className="screen-glow"></div>
         </a>
 
         {/* Right Monitor (HAL ARDC) */}
@@ -174,10 +191,19 @@ export default function CinematicHeroSection() {
           href="https://drive.google.com/file/d/1JmgHD1UgUWXGb1H9ghEbKUqQ7UVcR4CF/view" 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="hotspot right-monitor-hotspot"
-          aria-label="View HAL ARDC Report"
+          className="integrated-screen right-monitor-screen"
         >
-           <div className="hotspot-glow"></div>
+          <div className="screen-content hal-screen">
+            <div className="hal-header">Aircraft Research Intern — HAL (ARDC)</div>
+            <div className="hal-visual">
+               <div className="radar-circle"></div>
+               <div className="telemetry-data">
+                 <div>SYS: ONLINE</div>
+                 <div>AERO: STABLE</div>
+               </div>
+            </div>
+          </div>
+          <div className="screen-glow"></div>
         </a>
 
       </motion.div>
