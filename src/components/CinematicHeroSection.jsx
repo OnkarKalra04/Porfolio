@@ -129,9 +129,9 @@ export default function CinematicHeroSection() {
         </motion.div>
       </div>
 
-      {/* --- Interactive Holographic Monitors --- */}
+      {/* --- Invisible Interactive Hotspots (Mapped to Image Monitors) --- */}
       <motion.div 
-        className="holographic-hud-layer"
+        className="invisible-hotspots-layer"
         animate={{ x: parallaxX * 0.5, y: parallaxY * 0.5 }}
         transition={{ type: "spring", stiffness: 60, damping: 25 }}
       >
@@ -141,21 +141,10 @@ export default function CinematicHeroSection() {
           href="https://drive.google.com/file/d/1t47zM1KGKRwLa1q-UCY4j-NJGhL7i1Ed/view" 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="hud-aircraft-container hud-glass"
+          className="hotspot hologram-hotspot"
+          aria-label="View CAD Project"
         >
-          <div className="hud-title"><Activity size={12} /> Live Aero CAD Sync</div>
-          <div className="canvas-wrapper">
-            <div className="css-3d-scene">
-              <div className="css-3d-object">
-                <div className="css-3d-face front"></div>
-                <div className="css-3d-face back"></div>
-                <div className="css-3d-face left"></div>
-                <div className="css-3d-face right"></div>
-                <div className="css-3d-face top"></div>
-                <div className="css-3d-face bottom"></div>
-              </div>
-            </div>
-          </div>
+          <div className="hotspot-glow"></div>
         </a>
 
         {/* Center Monitor (Research Paper) */}
@@ -163,20 +152,10 @@ export default function CinematicHeroSection() {
           href="https://drive.google.com/file/d/19NKp6NW-FMI3O77_NuZlvN-fBtvkfcnZ/view" 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="hud-monitor center-monitor hud-glass"
+          className="hotspot center-monitor-hotspot"
+          aria-label="View Research Paper"
         >
-          <div className="hud-title"><FileText size={14} /> sys_research_v4.pdf</div>
-          <div className="hud-body document-body">
-            <div className="doc-skeleton">
-              <div className="doc-title">AI & Systems Design</div>
-              <div className="doc-line w-full"></div>
-              <div className="doc-line w-3/4"></div>
-              <div className="doc-line w-5/6"></div>
-              <div className="doc-line w-full"></div>
-              <div className="doc-line w-2/3"></div>
-            </div>
-            <div className="glow-effect"></div>
-          </div>
+           <div className="hotspot-glow"></div>
         </a>
 
         {/* Left Monitor (PathFinder) */}
@@ -184,21 +163,10 @@ export default function CinematicHeroSection() {
           href="https://path-finder-rho-five.vercel.app/" 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="hud-monitor left-monitor hud-glass"
+          className="hotspot left-monitor-hotspot"
+          aria-label="View PathFinder Prototype"
         >
-          <div className="hud-title"><Layout size={14} /> PathFinder UI - Live</div>
-          <div className="hud-body pathfinder-body">
-            <div className="pf-nav"></div>
-            <div className="pf-hero">
-              <div className="pf-button flicker-anim"></div>
-              <div className="pf-button"></div>
-            </div>
-            <div className="pf-grid">
-              <div className="pf-card"></div>
-              <div className="pf-card"></div>
-            </div>
-            <div className="glow-effect"></div>
-          </div>
+           <div className="hotspot-glow"></div>
         </a>
 
         {/* Right Monitor (HAL ARDC) */}
@@ -206,17 +174,10 @@ export default function CinematicHeroSection() {
           href="https://drive.google.com/file/d/1JmgHD1UgUWXGb1H9ghEbKUqQ7UVcR4CF/view" 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="hud-monitor right-monitor hud-glass"
+          className="hotspot right-monitor-hotspot"
+          aria-label="View HAL ARDC Report"
         >
-          <div className="hud-title"><Plane size={14} /> Aircraft Research Intern — HAL (ARDC)</div>
-          <div className="hud-body hal-body">
-            <div className="aero-grid"></div>
-            <div className="aero-stats">
-              <span>Telemetry: ONLINE</span>
-              <span>Propulsion: NOMINAL</span>
-            </div>
-            <div className="glow-effect"></div>
-          </div>
+           <div className="hotspot-glow"></div>
         </a>
 
       </motion.div>
