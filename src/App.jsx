@@ -1,7 +1,7 @@
 import { motion, useScroll, useSpring } from 'framer-motion';
 import './App.css';
 
-import HeroSection from './components/HeroSection';
+import CinematicHeroSection from './components/CinematicHeroSection';
 import AboutSection from './components/AboutSection';
 import SkillsSection from './components/SkillsSection';
 import CaseStudiesSection from './components/CaseStudiesSection';
@@ -14,6 +14,20 @@ import ExtracurricularSection from './components/ExtracurricularSection';
 import ContactSection from './components/ContactSection';
 import BackgroundDecor from './components/BackgroundDecor';
 import Navbar from './components/Navbar';
+
+const NarrativeBridge = ({ text }) => (
+  <motion.div 
+    className="narrative-bridge"
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, margin: "-100px" }}
+    transition={{ duration: 0.8, ease: "easeOut" }}
+  >
+    <div className="bridge-line"></div>
+    <span className="bridge-text">{text}</span>
+    <div className="bridge-line"></div>
+  </motion.div>
+);
 
 function App() {
   const { scrollYProgress } = useScroll();
@@ -34,13 +48,23 @@ function App() {
       />
 
       <main>
-        <HeroSection />
+        <CinematicHeroSection />
+        
         <AboutSection />
         <SkillsSection />
+        
+        <NarrativeBridge text="Systems Thinking" />
         <ExperienceSection />
+        
+        <NarrativeBridge text="Product Thinking" />
         <CaseStudiesSection />
+        
+        <NarrativeBridge text="Aerospace Engineering" />
         <CadProjectsSection />
+        
+        <NarrativeBridge text="Research & AI" />
         <ResearchSection />
+        
         <TrainingSection />
         <CertificationsSection />
         <ExtracurricularSection />
