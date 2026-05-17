@@ -129,9 +129,9 @@ export default function CinematicHeroSection() {
         </motion.div>
       </div>
 
-      {/* --- Integrated Screen Replacements (Mapped directly onto the physical monitors) --- */}
+      {/* --- Pure Invisible Interactive Hotspots (No floating cards) --- */}
       <motion.div 
-        className="integrated-screens-layer"
+        className="invisible-hotspots-layer"
         animate={{ x: parallaxX * 0.5, y: parallaxY * 0.5 }}
         transition={{ type: "spring", stiffness: 60, damping: 25 }}
       >
@@ -141,10 +141,11 @@ export default function CinematicHeroSection() {
           href="https://drive.google.com/file/d/1t47zM1KGKRwLa1q-UCY4j-NJGhL7i1Ed/view" 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="integrated-screen hologram-hotspot"
+          className="invisible-hotspot hologram-hotspot"
           aria-label="View CAD Project"
         >
-          <div className="hologram-pulse"></div>
+          <div className="hotspot-glow"></div>
+          <div className="hotspot-tooltip">Boeing 737 CAD Project</div>
         </a>
 
         {/* Center Monitor (Research Paper) */}
@@ -152,19 +153,10 @@ export default function CinematicHeroSection() {
           href="https://drive.google.com/file/d/19NKp6NW-FMI3O77_NuZlvN-fBtvkfcnZ/view" 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="integrated-screen center-monitor-screen"
+          className="invisible-hotspot center-monitor-hotspot"
         >
-          <div className="screen-content pdf-screen">
-             <div className="pdf-header">UAV Power Optimization Research Paper</div>
-             <div className="pdf-body">
-               <div className="pdf-line title"></div>
-               <div className="pdf-line"></div>
-               <div className="pdf-line short"></div>
-               <div className="pdf-line image-block"></div>
-               <div className="pdf-line"></div>
-             </div>
-          </div>
-          <div className="screen-glow"></div>
+          <div className="hotspot-glow"></div>
+          <div className="hotspot-tooltip">UAV Power Optimization Research</div>
         </a>
 
         {/* Left Monitor (PathFinder) */}
@@ -172,18 +164,10 @@ export default function CinematicHeroSection() {
           href="https://path-finder-rho-five.vercel.app/" 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="integrated-screen left-monitor-screen"
+          className="invisible-hotspot left-monitor-hotspot"
         >
-          <div className="screen-content pathfinder-screen">
-             <div className="pf-header">PathFinder</div>
-             <div className="pf-subtext">AI-Powered Career Guidance Platform</div>
-             <div className="pf-ui-grid">
-               <div className="pf-box active"></div>
-               <div className="pf-box"></div>
-               <div className="pf-box wide"></div>
-             </div>
-          </div>
-          <div className="screen-glow"></div>
+          <div className="hotspot-glow"></div>
+          <div className="hotspot-tooltip">PathFinder AI Platform</div>
         </a>
 
         {/* Right Monitor (HAL ARDC) */}
@@ -191,19 +175,10 @@ export default function CinematicHeroSection() {
           href="https://drive.google.com/file/d/1JmgHD1UgUWXGb1H9ghEbKUqQ7UVcR4CF/view" 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="integrated-screen right-monitor-screen"
+          className="invisible-hotspot right-monitor-hotspot"
         >
-          <div className="screen-content hal-screen">
-            <div className="hal-header">Aircraft Research Intern — HAL (ARDC)</div>
-            <div className="hal-visual">
-               <div className="radar-circle"></div>
-               <div className="telemetry-data">
-                 <div>SYS: ONLINE</div>
-                 <div>AERO: STABLE</div>
-               </div>
-            </div>
-          </div>
-          <div className="screen-glow"></div>
+          <div className="hotspot-glow"></div>
+          <div className="hotspot-tooltip">Aircraft Research Intern — HAL (ARDC)</div>
         </a>
 
       </motion.div>
