@@ -53,6 +53,7 @@ const Particles = () => {
 const WireframePlane = () => {
   const meshRef = useRef();
   useFrame((state) => {
+    if (!meshRef.current) return;
     const t = state.clock.getElapsedTime();
     meshRef.current.rotation.y = t * 0.4;
     meshRef.current.rotation.z = Math.sin(t * 0.5) * 0.1;
